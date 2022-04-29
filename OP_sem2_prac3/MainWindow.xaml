@@ -1,0 +1,40 @@
+﻿<Window x:Class="OP_sem2_prac3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OP_sem2_prac3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#11113f">
+        <TextBlock Text="Authorize" Foreground="#ffffff" FontSize="40" HorizontalAlignment="Center" FontFamily="Cambria"/>
+        <Button x:Name="regButton" Click="regButton_Click" Content="Register" FontSize="15" Background="#ffffff" Height="45" Width="80" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="exitButton" Click="exitButton_Click" Content="Exit" FontSize="15" Background="#ff7766" Height="45" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Border Background="#fefefe" BorderThickness="1" CornerRadius="15" Margin="100">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Select your login:&#160;</TextBlock>
+                    <ComboBox x:Name="cBox" SelectionChanged="cBox_SelectionChanged" Text="g" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Input your password:&#160;</TextBlock>
+                    <PasswordBox x:Name="tBox" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" PasswordChar="*"/>
+                </StackPanel>
+                <Button x:Name="confButton" Click="confButton_Click" Content="Confirm" Background="#89ef76"/>
+                <TextBlock x:Name="mssgBlock" Foreground="#ff0000"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
